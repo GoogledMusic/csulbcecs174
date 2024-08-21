@@ -1,0 +1,42 @@
+# strings definition
+s = 'Hello, World!'
+m = 'm'
+n = 'm'
+mn = 'mn'
+
+# accessing characters in a string
+print(s[0])  # H
+print(s[-1])  # !
+
+# string length
+print(len(s))  # 13
+
+# this loop output characters
+for i in range(len(s)):
+    print(s[i], end='$ ')
+print("after the first loop", i) # 12
+i = 0
+while i < len(s):
+    print(s[i], end='$ ')
+    i += 1
+print("after the first while loop", i) # this will print 13 because the loop will run 13 times
+for i in s:
+    print(i, end=' ')
+print("after the second loop", i)
+
+# string slicing
+print(s[0:5])  # Hello
+print(s[7:])  # World!
+print(s[:5])  # Hello
+print(s[::]) # Hello, World!
+print(s[::2])  # Hlo ol!
+print(s[1::2])  # el,Wrd
+
+# string concatenation
+print(s + ' ' + m)  # Hello, World! m
+print("Hello," + " World!") # Hello, World!
+print("Python " * 3) # Python Python Python
+
+# string indexing
+print(s.index('o'))  # 4
+print(s.index('o', 5))  # 8

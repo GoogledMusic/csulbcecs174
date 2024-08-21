@@ -1,0 +1,5 @@
+print("enter 3 numbers")
+n1 = input()
+n2 = input()
+n3 = input()
+print(f"the numbers are {n1}, {n2}, and, {n3}")

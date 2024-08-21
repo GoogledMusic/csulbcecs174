@@ -1,0 +1,37 @@
+import random
+
+class Monster:
+    def __init__(self, life, name, power):
+        print("I work without being called")
+        self.life = life
+        self.name = name
+        self.power = power
+        
+    def fight(self):
+        if self.power > 0:
+            self.power -= 3
+        else:
+            self.life -= 1
+    
+    def attack(self):
+        if self.power > 0:
+            self.power += 2
+        else:
+            self.life -= 1
+
+    def description(self):
+        return f'{self.name} has {self.life} life and {self.power} power'
+
+life = random.randint(5, 10)
+power = random.randint(5, 10)
+monst1 = Monster(life, "Zombie", random.randint(5, 15))
+print(monst1.description())
+monst2 = Monster(6, "Vampire", 100)
+print(monst2.description())
+monst1.name = "Zombie"
+monst2.name = "Vampire"
+print("zombie.power" + str(monst1.power))
+print("vampire.power" + str(monst2.power))
+monst1.attack()
+print(monst1.description())
+print(monst2.description())

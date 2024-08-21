@@ -1,0 +1,5 @@
+def greeting(name):
+    print(f'Hello {name}! How are you today?')
+
+NameOfThePersonUsingThisProgram = input("What is your name?\n")
+greeting(NameOfThePersonUsingThisProgram)

@@ -1,0 +1,48 @@
+for i in range (10): # 0 to 9
+    if i == 7:
+        continue # continue means to skip everything until the loop variable is incremented
+    print(i, end = " ")
+print()
+for i in range (10):
+    if i == 7:
+        break
+    print(i, end = " ")
+print()
+
+while True:
+    again = input("This is the loop body of an infinite loop that will keep asking you if you want to continue. Do you want to continue? (y/n) ")
+    if again.lower() == 'n':
+        break # continue will skip the rest of the loop, break will exit the loop
+
+print()
+
+for h in range (6): # 0 to 23
+    if h == 4:
+        break # this will break out of the innermost loop, which is the second loop, it will skip printing 4 in the hours
+    for m in range (6): # 0 to 59
+        if m == 5:
+            break # this will break out of the innermost loop, which is the second loop, it will skip printing 5 in the minutes
+        for s in range (6): # 0 to 59
+            if s == 3: 
+                break # this will break out of the innermost loop, which is the second loop, it will skip printing 3 in the seconds
+            print(f"{h}:{m}:{s}")
+# this will print out every second of the day by the hour, minute, and second in 24 hour format
+def sold(quan):
+    amnt = 0
+    amnt += quan
+    return amnt
+q = int(input("How many stocks did you sell? "))
+amount = sold(q)
+q = int(input("How many stocks did you sell? "))
+amount = sold(q)
+q = int(input("How many stocks did you sell? "))
+amount = sold(q)
+print(amount)
+
+def sell(quantity):
+    # simulate selling the quantity of stock
+    totalSold = 0
+    totalSold += quantity
+    print(f"Sold {quantity} stock(s) for a total of {totalSold} stock(s) sold.")
+#here's how we can use global variables to achieve this:
+    

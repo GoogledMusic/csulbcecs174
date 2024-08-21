@@ -1,0 +1,111 @@
+"""count = 10
+while count > 0:
+    print(count)
+    count -= 2
+First qustion is A
+"""
+
+"""count = 2
+while count < 10:
+    count += 2
+    print(count)
+Second question is C"""
+
+"""count = 5
+for count in range(5, 8):
+    print(count, count*2)
+third question is A"""
+
+"""print("loops are fun!")
+for count in range(8, 4, -2):
+    print("hooray!")
+fourth question is B"""
+"""
+apples = 6
+
+while apples < 0:
+    print("You can't eat", apples, "apples!")
+print("Goodbye, apple lover")
+Fifth question is D"""
+
+# Sixth question is D
+
+"""A = 5
+B = 3
+
+while A >= B:
+    print(A*A)
+    A = A - 1
+Seventh question is B"""
+
+
+"""Count = 1
+X = 3
+while Count <= X:
+    Y = Count + X
+    print(Y)
+    Count += 1
+Eigth question is A"""
+
+"""n = 5
+a = 2
+
+for b in range (1, n+1):
+    a = a + 2 * b
+print(a)
+Ninth question is C"""
+
+"""for x in range(1,3):
+    for y in range(3,5):
+        print(x*y)
+Tenth question is A"""
+
+"""g = 7
+
+while g <= 8:
+    h = 6
+    while h <= 7:
+        print(g + h)
+        h = h + 1
+    g = g + 1
+
+Eleventh question is D"""
+
+"""a = 3
+while a <= 6:
+    b = (2*a) - 1
+    print(b)
+    c = a
+    while c <= (a+1):
+        print(c)
+        c = c + 1
+    a = a + 2
+Twelveth question is C"""
+
+"""sum = 0
+for count in range (1, 50):
+    sum = sum + count
+thirteenth question is D"""
+
+"""number = 12
+for count in range(10, number, -1): 
+    print(number + count)
+# the for loop will not run because the range is invalid
+# fourteenth question is D"""
+
+"""m = 1
+while m <= 3:
+    p = 1
+    while p < 4:
+        print(m, "and", p)
+        p = p + 1
+    m = m + 1
+fifteenth question is ?"""
+
+m = 1
+while m <= 3:
+    p = 1
+    while p < 4:
+        print(m, "and", p)
+        p = p + 1
+    m = m + 1

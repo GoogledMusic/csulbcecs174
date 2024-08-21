@@ -1,0 +1,11 @@
+num = int(input(""))
+
+if num < 11 or num > 99:
+    print("Input must be 11-99")
+else:
+    while True:
+        if num % 11 == 0:
+            print(num)  # Add this line to print the number 11
+            break
+        print(num)
+        num -= 1

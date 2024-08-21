@@ -1,0 +1,42 @@
+# object orietned programming
+# a class, if a blueprint of an object (cookie cutter)
+# an instance of a class (it has its own components, attributes characteristics)
+# attriburtes(nouns that describe the object) behaviors (methods that my object can perform)
+# a class is a blueprint, an instance is an object
+# size for the data we define, specific operation we can perform on every object for example +, - *, /, //, **
+# string (+, *)
+# Ecapsulation: bundles of data (nouns) methods (verbs) worked in a single unit
+# Abstraction: hides the complex reality a=into simple components
+#   person class (ssn, age, address - drive(), eat(), walk() talk())
+#   student class (gps, student id, major, study), take exam(), ... )
+# Inheritance: a class can inherit from another class (the realtionship a student is a person)
+# Polymorphism: many forms, a method can be implemented in many ways (using the same function name but different body, and/or different datatypes)
+
+class Dog:
+    # class attribute
+    species = "Canis familiaris"
+    # initializer / instance attribute (constructor)
+    def __init__(self, name, age, color):
+        print("A dog has been created")
+        self.name = name
+        self.age = age
+        self.color = color
+
+    def description(self):
+        return f"{self.name} is {self.age} and it has {self.color} color"
+# modify the attribute
+    def selfName(self, name):
+        self.name = name
+# you just return the attribute
+    def getName(self):
+        return self.name
+
+myDog = Dog("Hunter", 6, "brown")
+myOtherDog = Dog("Buddy", 9, "black")
+
+"""print(myDog.description(99))
+print(myOtherDog.description("nine"))"""
+print(Dog.species)
+print(myDog.species)
+print(myOtherDog.species)
+print(myDog.color)

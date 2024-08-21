@@ -1,0 +1,2 @@
+text = "the quick brown fox jumps over 3 lazy dogs"
+print(text[10]+text[36]+text[2])

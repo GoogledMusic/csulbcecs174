@@ -1,0 +1,74 @@
+import cmath
+
+result1 = (4-5j) * (12+11j)
+polar1 = cmath.polar(result1)
+print("1- (4-5j)(12+11j):", polar1)
+
+result2 = (-3-1j) - (6-7j)
+polar2 = cmath.polar(result2)
+print("2- (-3-1j) - (6-7j):", polar2)
+
+result3 = (1+4j) - (-16+9j)
+polar3 = cmath.polar(result3)
+print("3- (1+4j) - (-16+9j):", polar3)
+
+result4 = 8j * (10+2j)
+polar4 = cmath.polar(result4)
+print("4- 8j * (10+2j):", polar4)
+
+result5 = (-3-9j) * (1+10j)
+polar5 = cmath.polar(result5)
+print("5- (-3-9j) * (1+10j):", polar5)
+
+result6 = (2+7j) * (8+3j)
+polar6 = cmath.polar(result6)
+print("6- (2+7j) * (8+3j):", polar6)
+
+result7 = 7 - 1j**2 + 10j
+polar7 = cmath.polar(result7)
+print("7- 7 - 1j**2 + 10j:", polar7)
+
+result8 = 1 + 5j - 3j
+polar8 = cmath.polar(result8)
+print("8- 1 + 5j - 3j:", polar8)
+
+result9 = (6+7j) / (8-1j)
+polar9 = cmath.polar(result9)
+print("9- (6+7j) / (8-1j):", polar9)
+import cmath
+
+result1 = (4-5j) * (12+11j)
+polar1 = cmath.polar(result1)
+print("Result 1:", polar1)
+
+result2 = (-3-1j) - (6-7j)
+polar2 = cmath.polar(result2)
+print("Result 2:", polar2)
+
+result3 = (1+4j) - (-16+9j)
+polar3 = cmath.polar(result3)
+print("Result 3:", polar3)
+
+result4 = 8j * (10+2j)
+polar4 = cmath.polar(result4)
+print("Result 4:", polar4)
+
+result5 = (-3-9j) * (1+10j)
+polar5 = cmath.polar(result5)
+print("Result 5:", polar5)
+
+result6 = (2+7j) * (8+3j)
+polar6 = cmath.polar(result6)
+print("Result 6:", polar6)
+
+result7 = 7 - 1j**2 + 10j
+polar7 = cmath.polar(result7)
+print("Result 7:", polar7)
+
+result8 = 1 + 5j - 3j
+polar8 = cmath.polar(result8)
+print("Result 8:", polar8)
+
+result9 = (6+7j) / (8-1j)
+polar9 = cmath.polar(result9)
+print("Result 9:", polar9)

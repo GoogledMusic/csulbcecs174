@@ -1,0 +1,9 @@
+words = input().split()
+acronym = ""
+
+for word in words:
+    if word[0].isupper():
+        acronym += word[0]
+
+acronym_with_periods = ".".join(acronym)
+print(acronym_with_periods + ".")

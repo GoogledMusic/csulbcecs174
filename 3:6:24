@@ -1,0 +1,57 @@
+#define a tuple
+t1 = ()
+coordinates = (3, 7)
+a, b, c = 13, 14, 15 # not a tuple, but a sequence of variables
+
+#unpack the tuple into seperate variables
+x, y = coordinates
+
+#now, x holds the first element of the tuple, and y holds the second element
+print(x, y)
+
+#define a tuple
+my_tuple = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print("tuple", my_tuple[3])
+
+#try to modify a value (this will result in an error)
+# my_tuple[0] = 10
+
+d1 = {"banana": 12.5, "apple": 13}
+print("Dictionary", d1.keys())
+print("Dictionary", d1['banana'])
+d2 = {1: "One", 2: "One"}
+print("Dictionary", d2.keys())
+print("Dictionary", d2[1])
+# define a sample dictionary
+student = {
+    'name': 'John',
+    'age': 25,
+    'grades': {'math: 90', 'science: 80', 'english: 85'}
+}
+
+#accessing elements
+print("Name:", student['name'])
+print("Age:", student['age'])
+
+
+#Times Table
+multiplier = int(input("What times table do you want to see? "))
+print(f"1 x multiplier = {1 * multiplier}")
+print(f"2 x multiplier = {2 * multiplier}")
+print(f"3 x multiplier = {3 * multiplier}")
+print(f"4 x multiplier = {4 * multiplier}")
+print(f"5 x multiplier = {5 * multiplier}")
+"""
+#Times Table
+for i in range(1, 6):
+    print(f"{i} x {multiplier} = {i * multiplier}")
+"""
+
+
+#Times Table
+#loop variant: initalize(once), test(1 or more), update(0 or more)
+count = 1 #loop variant, initalize
+Large = 13
+while count <= Large: #loop variant, test
+    print(f"{count} x {multiplier} = {count * multiplier}")
+    count += 1 #loop variant, update

@@ -1,0 +1,17 @@
+while True:
+    highway_number = int(input("Please enter a US Interstate Highway route number: "))
+    if highway_number == 0:
+        break
+    elif 0 < highway_number <= 999:
+        if highway_number < 100:  # Prima
+            orientation = "north-south" if highway_number % 2 != 0 else "east-west"
+            if highway_number % 5 == 0:
+                print(f"Interstate {highway_number} is a long-distance arterial highway oriented {orientation}.\n")
+            else:
+                print(f"Interstate {highway_number} is oriented {orientation}.\n")
+        else:  # Auxiliary
+            parent_highway = highway_number % 100
+            aux_type = "spur" if int(str(highway_number)[0]) % 2 != 0 else "loop"
+            print(f"Interstate {highway_number} is a {aux_type} highway of Interstate {parent_highway}.\n")
+    else:
+        continue

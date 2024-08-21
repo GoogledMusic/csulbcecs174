@@ -1,0 +1,9 @@
+# Define your function here 
+def laps_to_miles(laps):
+    miles = laps * 0.25
+    return miles
+
+if __name__ == '__main__':
+    # Type your code here. Your code must call the function. 
+    laps = float(input())
+    print(f'{laps_to_miles(laps):.2f}')

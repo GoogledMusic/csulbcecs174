@@ -1,0 +1,44 @@
+#Functions
+import random
+#Boolean functions to validate the user's entry, it takes an integer value and returns true or false whether or not is in in the range of 1 and 6.
+def isValid(n): 
+    if n in range (1, 7):
+        return True
+    else:
+        return False
+#This function takes no parameters and returns an integer value between 1 and 6.
+def dieRoll():
+    dieVal = int(input("Enter a number between 1 and 6: "))
+    '''
+    while isValid(dieVal) == False:
+    print("Invalid input (number must be between 1 and 6)")
+    dieVal = int(input("Enter a number between 1 and 6: "))
+    '''
+    return dieVal # 6, 88 example of returning multiple values in a function
+# anything after the return statement is ignored
+
+def dieGame():
+    u1 = dieRoll()
+    while not (isValid(u1)):
+        print("Invalid input (number must be between 1 and 6)")
+        u1 = dieRoll()
+    #print("content of u ", u1)
+    u2 = random.randint(1, 6)
+    '''while not (isValid(u2)):
+        print("Invalid input (number must be between 1 and 6)")
+        u2 = dieRoll()'''
+    #print("content of u2 ", u2)
+    if u1 > u2:
+        print(f"User 1 wins! User 2 rolled {u2}")
+    elif u1 < u2:
+        print(f"User 2 wins! User 1 rolled {u1}")
+    else:
+        print("It's a tie!")
+        print(f"User 1 rolled a {u1} and User 2 rolled a {u2}")
+again = True
+while again:
+    dieGame()
+    rep = input("Do you want to play again? (Y/N): ").upper()
+    if rep != "Y":
+        again = False
+        print("Okay, lets play another time!")

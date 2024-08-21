@@ -1,0 +1,22 @@
+"""
+a = int(input("Enter number 1: "))
+b = int(input("Enter number 2: "))
+print(a == b) # check if equal
+
+print("a == b", a == b)
+input()
+
+a = int(input("Enter number a: "))
+b = int(input("Enter number b: "))
+print(a, "is greater than", b, a > b)
+print(a, "is greater than or equal to", b, a >= b)
+print(a, "is less than", b, a < b)
+print(a, "is less than or equal to", b, a <= b)
+"""
+
+a = input("enter a string: ")
+b = input("enter b string: ")
+print(a, "is greater than", b, a > b)
+print(a, "is greater than or equal to", b, a >= b)
+print(a, "is less than", b, a < b)
+print(a, "is less than or equal to", b, a <= b)

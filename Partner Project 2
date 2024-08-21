@@ -1,0 +1,54 @@
+import random
+user_char = 'y'
+account_number = random.randrange(1000,9001)
+while user_char == 'y':
+    
+    customer_code = input('Enter customer code (R, C, or I):').upper()
+    if customer_code not in ['R', 'C', 'I']:
+        print('Invalid input (customer code)')
+        
+    else:
+        customer_name = input('Enter name: ')
+        customer_address = input('Enter address: ')
+        phone_number = input('Enter contact: ')
+        beginning_reading = int(input('Enter beginning reading (between 0 and 999999999):'))
+        ending_reading = int(input('Enter ending reading (between 0 and 999999999):'))
+        while not 0 <= beginning_reading <= 999999999 or not 0 <= ending_reading <= 999999999:
+            print('Invalid input(beginning or ending reading value is out of the range')
+            beginning_reading = int(input('Enter beginning reading (between 0 and 999999999):'))
+            ending_reading = int(input('Enter ending reading (between 0 and 999999999):'))
+
+        else:
+            if ending_reading >= beginning_reading: 
+                gallons_used = (ending_reading - beginning_reading)/10
+            else:
+                gallons_used = (999999999-beginning_reading + ending_reading + 1) / 10
+            if customer_code == 'R':
+                bill_amount = 5.00 + (0.0005 * gallons_used)
+            elif customer_code == 'C':
+                if gallons_used <= 4000000:
+                   bill_amount = 1000.00
+                else:
+                    new = gallons_used - 4000000
+                    bill_amount = 1000.00 + (0.00025 * new)
+            elif customer_code == 'I':
+                if gallons_used <= 4000000:
+                    bill_amount = 1000.00
+                elif 4000000 < gallons_used <= 10000000:
+                    bill_amount = 2000.00
+                elif gallons_used > 10000000:
+                    new = gallons_used - 10000000
+                    bill_amount = 2000.00 + (0.00025 * new)
+            else:
+                amount = 0.00
+            print('LONG BEACH WATER-CONSERVATION AND UTILITY COMPANY')
+            print(f'Account number: {account_number}')
+            print(f'Customer name: {customer_name}')
+            print(f'Home/Work Address: {customer_address}')
+            print(f'Home/Work contact: {phone_number}')
+            print(f"Customer code: {customer_code}")
+            print(f"Beginning meter reading: {beginning_reading:09}")
+            print(f"Ending meter reading: {ending_reading:09}")
+            print(f"Gallons of water used: {gallons_used:.1f}")
+            print(f"Amount billed: ${bill_amount:.2f}")
+            user_char = input('Do you want to perform new calculation: ').lower()

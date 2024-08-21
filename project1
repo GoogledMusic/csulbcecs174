@@ -1,0 +1,49 @@
+.data
+    prompt: .asciiz "Enter a number between 0 and 100 (-1 to stop): "
+    error_msg: .asciiz "Invalid input! Try again.\n"
+    result_msg: .asciiz "The average is: "
+
+.text
+.globl main
+main:
+    li $s0, 0          # Sum of valid numbers
+    li $s1, 0          # Count of valid numbers
+
+input_loop:
+    li $v0, 4          # System call to print string
+    la $a0, prompt     # Load address of prompt
+    syscall
+
+    li $v0, 5          # System call to read integer
+    syscall
+
+    blt $v0, -1, input_error  # Check if input is less than -1
+    bgt $v0, 100, input_error # Check if input is greater than 100
+    beq $v0, -1, compute_avg  # If input is -1, jump to compute average
+
+    add $s0, $s0, $v0  # Add the input to sum
+    addi $s1, $s1, 1   # Increment count
+    j input_loop       # Jump back to start of loop
+
+input_error:
+    li $v0, 4          # System call to print string
+    la $a0, error_msg  # Load address of error message
+    syscall
+    j input_loop       # Jump back to prompt input
+
+compute_avg:
+    beqz $s1, exit     # If no valid numbers entered, exit
+
+    li $v0, 4          # Print result message
+    la $a0, result_msg
+    syscall
+
+    div $s0, $s1       # Calculate average
+    mflo $a0           # Move result from LO to $a0
+
+    li $v0, 1          # System call to print integer
+    syscall
+
+exit:
+    li $v0, 10         # Exit program
+    syscall
